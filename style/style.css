@@ -1,0 +1,172 @@
+html, body {
+  margin:0;
+  padding:0;
+  border: solid black;
+  border-radius: 10px;
+  background-color:rgb(250, 238, 219);
+}
+
+/* Définition de la taille et de la police de caractère pour h1 et h4 */
+
+h1 {
+  font-family: "Permanent Marker";
+  text-align: center;
+  font-size: 50px;
+}
+
+h4 {
+  font-family: "Permanent Marker";
+  text-align: center;
+  font-size:20px;
+}
+
+/* Positionnement des images dans les cases */
+img {
+    object-position: 100% 100%;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    z-index: 0;
+}
+
+/* Selection de la police */
+.comic {
+  display:flex;
+  flex-wrap:wrap;
+  font-family: "Permanent Marker";
+  padding:1vmin;
+}
+
+/* design général des cases */
+.cases {
+  border:solid 2px #000;
+  box-shadow:0 6px 6px -6px #000;
+  display:inline-block;
+  flex:1 1;
+  height:300px;
+  margin:1vmin;
+  overflow:hidden;
+  position:relative;
+  border-width: 5px 4px 3px 5px;
+  border-radius:5% 2% 7% / 4% 6% 5% ;
+  }
+
+/* Formatage du texte dans les commentaires */
+.text {
+    background-color:#fff;
+    border:solid 2px #000;
+    margin:0;
+    padding:3px 10px;
+  }
+
+/* commentaire en haut à gauche */
+.top-left {
+  left:-6px;
+  position:absolute;
+  top:-2px;
+  transform:skew(-15deg);
+  z-index: 1000;
+}
+
+/* Commentaire en bas à droite */
+.bottom-right {
+  bottom:-2px;
+  position:absolute;
+  right:-6px;
+  transform:skew(-15deg);
+  z-index: 1000;
+}
+
+/* commentaire en haut à droite */
+.top-right {
+  right:-6px;
+  position:absolute;
+  top:-2px;
+  transform:skew(15deg);
+  z-index: 1000;
+}
+
+
+
+
+/* Bulle de parole */
+.speech {
+    background-color:#fff;
+    border:solid 2px #000;
+    border-radius:12px;
+    display:inline-block;
+    margin:.5em;
+    padding:.5em 1em;
+    position:relative;
+    z-index: 100;
+  }
+
+  /* Bulle de parole - sans flêche
+.speechh {
+    top: 40px;
+    right: -200px;
+    background-color:#fff;
+    border:solid 2px #000;
+    border-radius:12px;
+    display:inline-block;
+    margin:.5em;
+    padding:.5em 1em;
+    position:relative;
+    z-index: 100;
+  } */
+
+
+
+  /* Flêche de la bulle de parole (speech)*/
+  .speech:before {
+    border:solid 12px transparent;
+    border-left:solid 12px #000;
+    border-top:solid 12px #000;
+    bottom:-24px;
+    content:"";
+    height:0;
+    left:24px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+
+  .speech:after {
+    border:solid 10px transparent;
+    border-left:solid 10px #fff;
+    border-top:solid 10px #fff;
+    bottom:-19px;
+    content:"";
+    height:0;
+    left:27px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+
+
+/* definition de la largeur relative de chaque case (de 1 à 7) */
+.cases:nth-child(1) {
+  flex-basis: 250px;
+}
+.cases:nth-child(2) {
+  flex-basis: 400px;
+}
+.cases:nth-child(3) {
+  flex-basis: 400px;
+}
+.cases:nth-child(4) {
+  flex-basis: 400px;
+}
+.cases:nth-child(5) {
+  flex-basis: 300px;
+}
+.cases:nth-child(6) {
+  flex-basis: 300px;
+}
+
+.cases:nth-child(7) {
+  flex-basis: 220px;
+}
+
